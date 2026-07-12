@@ -1,0 +1,54 @@
+
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EcoQuest Ultimate</title>
+<style>
+body{margin:0;font-family:Trebuchet MS,sans-serif;background:linear-gradient(135deg,#34d399,#60a5fa,#facc15);overflow:hidden}
+.leaf{position:fixed;top:-20px;font-size:24px;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+.card{max-width:760px;margin:40px auto;background:#ffffffee;padding:28px;border-radius:24px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+button{padding:16px 28px;font-size:22px;background:#16a34a;color:#fff;border:0;border-radius:18px;cursor:pointer}
+button:hover{transform:scale(1.05)}
+.badge{display:inline-block;background:#22c55e;color:#fff;padding:8px 16px;border-radius:999px}
+</style></head><body>
+<script>
+for(let i=0;i<18;i++){
+ let d=document.createElement('div');
+ d.className='leaf'; d.textContent=['🍃','🌿','🦋'][i%3];
+ d.style.left=(Math.random()*100)+'vw';
+ d.style.animationDuration=(5+Math.random()*6)+'s';
+ d.style.animationDelay=(-Math.random()*6)+'s';
+ document.body.appendChild(d);
+}
+function start(){
+const p=`You are the 🌍 EcoQuest AI Game Master.
+
+Ask EXACTLY ONE environmental question for a middle-school science exhibition.
+Wait for the player's answer.
+Do not ask another question unless the player asks.
+
+If correct reply:
+🎉🎉🎉 YAYYYYYY!! 🥳🌍✨
+🌟 Fantastic! That's absolutely CORRECT!
+🟢 Collect +1 Green Token! 🍀
+🏆 You're an Eco Hero! Keep protecting our planet! 🌱🌎
+
+If wrong reply:
+😅 Oops!
+🌱 Ohhh... Try next time! 💚
+🔴 Collect +1 Red Token.
+💪 Keep learning—you'll get the next one!
+
+Use colorful emojis and an energetic game-show style.`;
+window.open("https://chatgpt.com/?q="+encodeURIComponent(p),"_blank");
+}
+</script>
+<div class="card">
+<div style="font-size:70px">🌍🌈🌳🐝♻️</div>
+<h1>EcoQuest AI Game Master</h1>
+<div class="badge">Science Exhibition Edition</div>
+<h2>🎯 Can You Become an Eco Hero?</h2>
+<p>Answer one fun environmental question and earn your token!</p>
+<p>🟢 Correct = +1 Green Token<br>🔴 Wrong = +1 Red Token</p>
+<button onclick="start()">🚀 START ECOQUEST 🚀</button>
+<p>🌿 Learn • Play • Protect the Planet 🌿</p>
+</div></body></html>
